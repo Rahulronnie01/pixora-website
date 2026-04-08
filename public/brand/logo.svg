@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#00ffb2" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Outer glowing rings -->
+  <circle cx="256" cy="256" r="230" stroke="#00ffb2" stroke-width="4" stroke-opacity="0.3" />
+  <circle cx="256" cy="256" r="210" stroke="#00ffb2" stroke-width="8" filter="url(#glow)" />
+  
+  <!-- Stylized inner 'P' with X transition -->
+  <path d="M180 340V172C180 154.327 194.327 140 212 140H280C313.137 140 340 166.863 340 200C340 233.137 313.137 260 280 260H210L320 370" 
+        stroke="url(#brandGradient)" 
+        stroke-width="45" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+  
+  <!-- Atmospheric particles -->
+  <circle cx="150" cy="150" r="4" fill="#00ffb2" />
+  <circle cx="360" cy="300" r="3" fill="#00ffb2" />
+  <circle cx="250" cy="400" r="2" fill="#00ffb2" />
+</svg>

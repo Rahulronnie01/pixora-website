@@ -1,0 +1,41 @@
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-header">
+    <div class="logo">
+      <img src="/brand/logo.png" alt="Pixora" style="width: 24px;">
+      <span>Pixora</span>
+    </div>
+    <div id="mobile-close" style="cursor: pointer;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg></div>
+  </div>
+  <div class="mobile-links">
+    <a href="/index.html">Home</a>
+    <a href="/index.html#brands-root">Brands</a>
+    <a href="/index.html#video-reels-root">Content Vault</a>
+    <a href="/index.html#features-root">Specialized Services</a>
+    <a href="/about.html">Our Mission</a>
+    <a href="/case-studies.html">Win Stories</a>
+    <a href="/contact.html">Let's Talk</a>
+  </div>
+  <div class="mobile-menu-footer">
+    <a href="/contact.html" class="btn-primary"
+      style="width: 100%; text-align: center; display: block; font-size: 1.1rem; padding: 1.2rem;">Scale your brand</a>
+  </div>
+
+  <script>
+    // Adjust links based on current path to handle subdirectories like /services/
+    (function () {
+      const isSubpage = window.location.pathname.includes('/services/');
+      if (isSubpage) {
+        document.querySelectorAll('.mobile-links a, .mobile-menu-footer a').forEach(a => {
+          const href = a.getAttribute('href');
+          if (href && href.startsWith('/')) {
+            a.setAttribute('href', '..' + href);
+          }
+        });
+      }
+    })();
+  </script>
+</div>

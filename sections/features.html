@@ -1,0 +1,83 @@
+  <section class="features" id="features">
+    <h2 class="section-title">Our Specialized Services</h2>
+    <p class="section-subtitle">We provide high-impact solutions to help your brand dominate the digital landscape.</p>
+
+    <div class="features-grid">
+      <a href="/services/social-media-marketing.html" class="feature-card" style="text-decoration: none; color: inherit; display: block;">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title">Social Media Marketing</h3>
+        <p class="feature-desc">Building and managing your brand presence across all social channels with strategic content.</p>
+        <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Learn more →</span>
+      </a>
+      <a href="/services/performance-marketing.html" class="feature-card" style="text-decoration: none; color: inherit; display: block;">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <h3 class="feature-title">Performance Marketing</h3>
+        <p class="feature-desc">Data-driven campaigns focused on ROI and measurable growth for your business.</p>
+        <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Learn more →</span>
+      </a>
+      <a href="/services/website-building.html" class="feature-card" style="text-decoration: none; color: inherit; display: block;">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h3 class="feature-title">Website Building</h3>
+        <p class="feature-desc">High-performance, premium websites designed to convert visitors into loyal customers.</p>
+        <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Learn more →</span>
+      </a>
+      <a href="/services/conversion-optimization.html" class="feature-card" style="text-decoration: none; color: inherit; display: block;">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <polyline points="17 11 19 13 23 9"></polyline>
+          </svg>
+        </div>
+        <h3 class="feature-title">Conversion</h3>
+        <p class="feature-desc">Optimizing your sales funnel to maximize value from every single lead.</p>
+        <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Learn more →</span>
+      </a>
+      <a href="/services/ai-automations.html" class="feature-card" style="text-decoration: none; color: inherit; display: block;">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+            <polyline points="7.5 19.79 7.5 14.63 3 12"></polyline>
+            <polyline points="21 12 16.5 14.63 16.5 19.79"></polyline>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <h3 class="feature-title">AI Automations</h3>
+        <p class="feature-desc">Implementing intelligent systems to streamline your workflows and scale operations.</p>
+        <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Learn more →</span>
+      </a>
+    </div>
+
+  <script>
+    // Adjust links based on current path to handle subdirectories
+    (function() {
+      const isSubpage = window.location.pathname.includes('/services/');
+      if (isSubpage) {
+        document.querySelectorAll('.features-grid a').forEach(a => {
+          const href = a.getAttribute('href');
+          if (href && href.startsWith('/')) {
+            a.setAttribute('href', '..' + href);
+          }
+        });
+      }
+    })();
+  </script>
+  </section>

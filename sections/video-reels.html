@@ -1,0 +1,57 @@
+<div class="boxed-section">
+  <!-- THE CONTENT VAULT - Dynamic Reel Showcase -->
+  <div class="border-bottom-extended" style="padding: 4rem 0 2rem 0; position: relative; overflow: hidden;">
+    <div style="text-align: center; margin-bottom: 3rem; padding: 0 2rem;">
+      <h2 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem;">The <span class="gradient-text">Content
+          Vault</span></h2>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.15rem;">Witness the virality
+        engineered by our creators. 100M+ Aggregate reach across 15 high-impact campaigns.</p>
+    </div>
+
+    <div class="reel-engine" style="position: relative;">
+      <div class="reel-marquee" id="reel-track"></div>
+      
+      <!-- Infinite Scroll Navigation - Modern Side Buttons -->
+      <button class="reel-nav reel-nav-prev" id="reel-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="reel-nav reel-nav-next" id="reel-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
+      <!-- Modern Video Modal - NOW INSIDE MARQUEE for ultra-localized blur -->
+    <div class="reel-modal" id="reel-modal">
+      <div class="reel-modal-container">
+        <!-- Close button now inside the container for modern focus -->
+        <button class="reel-modal-close" id="modal-close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        
+        <!-- Replay Overlay -->
+        <div class="reel-replay-overlay" id="reel-replay-btn">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+          <span style="display: block; margin-top: 1rem; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Watch Again</span>
+        </div>
+
+        <video id="modal-video" src="" playsinline></video>
+          <div class="reel-controls">
+            <button class="reel-control-btn" id="modal-play-pause">
+              <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <svg id="pause-icon" style="display:none;" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+            </button>
+            
+            <!-- Progress Bar -->
+            <div class="reel-progress-container" id="modal-progress-container">
+              <div class="reel-progress-bar" id="modal-progress-bar"></div>
+            </div>
+
+            <button class="reel-control-btn" id="modal-mute">
+              <svg id="unmute-icon" style="display:none;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              <svg id="mute-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

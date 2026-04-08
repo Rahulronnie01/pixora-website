@@ -1,0 +1,137 @@
+<section class="contact-main boxed-section" style="padding: 10rem 2rem; width: 100%;">
+  <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 8rem; align-items: start;">
+    
+    <!-- Left: Form Column -->
+    <div style="position: relative;">
+      <h2 class="section-title" style="text-align: left; margin-bottom: 3rem; font-size: 3rem;">Project <span class="gradient-text">Inquiry</span></h2>
+      <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 4.5rem; font-size: 1.1rem; max-width: 500px;">
+        Tell us about your brand’s goals and current challenges. Our specialists will review your industry and provide a custom growth roadmap.
+      </p>
+
+      <div id="form-container">
+        <form id="modern-contact-form" class="modern-form" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="modern-form-group">
+               <label class="modern-label">Full Name*</label>
+               <input type="text" name="name" placeholder="John Doe" class="modern-input" required>
+            </div>
+            <div class="modern-form-group">
+              <label class="modern-label">Phone Number*</label>
+              <input type="tel" name="phone" placeholder="+91 00000 00000" class="modern-input" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="modern-form-group">
+              <label class="modern-label">Work Email*</label>
+              <input type="email" name="email" placeholder="john@company.com" class="modern-input" required>
+            </div>
+            <div class="modern-form-group">
+              <label class="modern-label">Company Name</label>
+              <input type="text" name="company" placeholder="Pixora Inc." class="modern-input">
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="modern-form-group">
+               <label class="modern-label" id="spend-label">Current Monthly Spend (INR)</label>
+               <select name="monthly-spend" class="modern-select" id="spend-select">
+                 <option value="0-50k">0 - 50,000</option>
+                 <option value="50k-2l">50,000 - 2,00,000</option>
+                 <option value="2l-10l">2,00,000 - 10,00,000</option>
+                 <option value="10l+">10,00,000+</option>
+               </select>
+            </div>
+            <div class="modern-form-group" style="visibility: hidden;">
+               <!-- Placeholder to balance the grid -->
+            </div>
+          </div>
+
+          <div class="modern-form-group">
+             <label class="modern-label">Select Your Goals</label>
+             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+                <label style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                   <input type="checkbox" name="goal" value="ROI" style="width: 1.25rem; height: 1.25rem; accent-color: var(--accent-color);">
+                   <span style="font-size: 0.9rem;">ROI Maximization</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                   <input type="checkbox" name="goal" value="Sales" style="width: 1.25rem; height: 1.25rem; accent-color: var(--accent-color);">
+                   <span style="font-size: 0.9rem;">Sales Scaling</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                   <input type="checkbox" name="goal" value="AI" style="width: 1.25rem; height: 1.25rem; accent-color: var(--accent-color);">
+                   <span style="font-size: 0.9rem;">AI Workflows</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                   <input type="checkbox" name="goal" value="Web" style="width: 1.25rem; height: 1.25rem; accent-color: var(--accent-color);">
+                   <span style="font-size: 0.9rem;">Web Innovation</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                   <input type="checkbox" name="goal" value="Brand" style="width: 1.25rem; height: 1.25rem; accent-color: var(--accent-color);">
+                   <span style="font-size: 0.9rem;">Brand Identity</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                   <input type="checkbox" name="goal" value="Leadgen" style="width: 1.25rem; height: 1.25rem; accent-color: var(--accent-color);">
+                   <span style="font-size: 0.9rem;">Lead Gen</span>
+                </label>
+             </div>
+          </div>
+
+          <div class="modern-form-group">
+            <label class="modern-label">Detailed Project Description</label>
+            <textarea name="description" rows="6" placeholder="Help us understand what you hope to achieve with Pixora..." class="modern-textarea"></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn-primary" style="width: fit-content; padding: 1.25rem 3rem; font-size: 1.1rem; margin-top: 2rem;">Submit Inquiry</button>
+        </form>
+
+        <div id="form-success" style="display: none; padding: 4rem; border: 1px dashed var(--accent-color); border-radius: 2rem; text-align: center; background: rgba(0, 255, 178, 0.05);">
+          <h3 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Inquiry Submitted!</h3>
+          <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">Thank you for reaching out. A growth specialist from Pixora will review your data and get back to you via your work email within 24 hours.</p>
+          <button onclick="window.location.reload()" class="btn-outline" style="margin-top: 2.5rem;">Send Another Inquiry</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Context/Info Column -->
+    <div style="position: sticky; top: 10rem;">
+      <div style="background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%); border: 1px solid var(--border-color); padding: 3rem; border-radius: 2rem; position: relative; overflow: hidden;">
+        <div style="position: absolute; width: 300px; height: 300px; background: var(--accent-color); opacity: 0.1; filter: blur(80px); top: -150px; right: -150px; z-index: -1;"></div>
+        
+        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem;">Why partner <span class="gradient-text">with us?</span></h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+          <div style="display: flex; gap: 1.25rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,255,178,0.1); border: 1px solid var(--accent-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Priority Support</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Our clients get 24/7 priority access to our strategy and engineering teams.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1.25rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,255,178,0.1); border: 1px solid var(--accent-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Results Guarantee</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">We operate on transparency. If we don't hit our agreed KPIs, we work for free.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1.25rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,255,178,0.1); border: 1px solid var(--accent-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Lightning Fast Delivery</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">From audit to execution in less than 7 days. We value your speed to market.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
