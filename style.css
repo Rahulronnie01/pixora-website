@@ -22,21 +22,23 @@ html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
+@media screen and (min-width: 769px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #2a2a35;
-  border-radius: 10px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a35;
+    border-radius: 10px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-color);
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+  }
 }
 
 body {
