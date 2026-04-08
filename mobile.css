@@ -9,6 +9,11 @@
     position: relative;
     max-width: 100vw;
   }
+  
+  /* Fix: Prevent short scrollbar syndrome during async chunk rendering on mobile connections */
+  #content-root {
+    min-height: 400vh;
+  }
 
   section,
   footer,

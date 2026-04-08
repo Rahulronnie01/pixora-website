@@ -320,14 +320,17 @@ function initApp() {
             const span = document.createElement('span');
             span.innerHTML = word + ' ';
             span.style.color = 'rgba(255, 255, 255, 0.1)';
-            span.style.filter = 'blur(4px)';
-            span.style.transition = 'filter 0.4s ease';
+            if (window.innerWidth > 768) {
+              span.style.filter = 'blur(4px)';
+            }
+            // Removing transition to avoid fighting with GSAP scroll-scrub
             philosophyEl.appendChild(span);
           }
         });
       }
     });
 
+    const isMobile = window.innerWidth <= 768;
     gsap.to('.philosophy-text span', {
       scrollTrigger: {
         trigger: '.philosophy',
@@ -336,7 +339,7 @@ function initApp() {
         scrub: 0.5,
       },
       color: '#ffffff',
-      filter: 'blur(0px)',
+      filter: isMobile ? 'none' : 'blur(0px)',
       stagger: 0.05
     });
   }
@@ -444,10 +447,12 @@ function initWordSwapper() {
     const newWidth = shadowSpan.getBoundingClientRect().width + buffer;
 
     // Premium silky transition
+    // Mobile optimized: remove blur on mobile because it lags the GPU
+    const isMobile = window.innerWidth <= 768;
     const tl = gsap.timeline();
     tl.to(swapper, {
       opacity: 0,
-      filter: 'blur(12px)',
+      filter: isMobile ? 'none' : 'blur(12px)',
       duration: 0.5,
       ease: 'power2.inOut'
     })
