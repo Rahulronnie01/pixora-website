@@ -15,15 +15,15 @@
     min-height: 400vh;
   }
 
-  /* Completely hide the scrollbar track on mobile to remove the 'gray line' artifacts */
+  /* Allow default mobile scrollbar behavior (auto-hides after scroll) */
   ::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
+    width: 0px;
+    background: transparent;
   }
   
   * {
-    -ms-overflow-style: none !important;
-    scrollbar-width: none !important;
+    -ms-overflow-style: auto !important;
+    scrollbar-width: thin !important;
   }
 
   /* Remove side borders on mobile specifically to eliminate the 'gray lines' on edges */
