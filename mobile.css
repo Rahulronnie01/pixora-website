@@ -15,6 +15,31 @@
     min-height: 400vh;
   }
 
+  /* Completely hide the scrollbar track on mobile to remove the 'gray line' artifacts */
+  ::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+  }
+  
+  * {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  /* Remove side borders on mobile specifically to eliminate the 'gray lines' on edges */
+  .features, 
+  .cryptos, 
+  .how-it-works, 
+  .testimonials, 
+  .pricing, 
+  .faq, 
+  .footer-container,
+  .boxed-section {
+    border-left: none !important;
+    border-right: none !important;
+    margin: 0 !important;
+  }
+
   section,
   footer,
   header {

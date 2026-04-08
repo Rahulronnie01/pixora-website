@@ -163,14 +163,11 @@ function initReelEngine() {
       
       modal.classList.add('active');
       
-      // Mobile-only fixes: DOM move, Scroll Lock, and Pause Background Reels for bandwidth
+      // Mobile-only fixes: DOM move and Scroll Lock
       if (window.innerWidth <= 768) {
         if (modal.parentNode !== document.body) document.body.appendChild(modal);
         document.documentElement.style.overflow = 'hidden';
         document.body.style.overflow = 'hidden';
-        
-        // Critical: Pause all background videos so network bandwidth and GPU focus entirely on the modal video
-        document.querySelectorAll('.reel-item video').forEach(v => v.pause());
       }
 
       marquee.pause();
@@ -214,14 +211,10 @@ function initReelEngine() {
   closeBtn.addEventListener('click', () => {
     modal.classList.remove('active');
     
-    // Mobile-only fixes: Unlock scroll and Resume background videos
+    // Mobile-only fixes: Unlock scroll
     if (window.innerWidth <= 768) {
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
-      document.querySelectorAll('.reel-item video').forEach(v => {
-        // Only attempt to play if it was paused to avoid DOM errors
-        if(v.paused) v.play().catch(e => console.warn(e));
-      });
     }
 
     marquee.play();
